@@ -275,17 +275,6 @@ img {
   align-items: center;
   padding: 10px 28px;
   min-width: 200px;
-  background-color: var(--accent-text-color);
-  color: var(--white-color);
-  border: 1px solid transparent;
-  border-radius: 4px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .subscribe__button:hover,
@@ -315,7 +304,7 @@ img {
   background-repeat: no-repeat;
 }
 
-.hero-title {
+.hero__title {
   margin-bottom: 30px;
   color: var(--white-color);
   font-weight: 900;
@@ -326,15 +315,11 @@ img {
   width: 700px;
   margin: 0 auto 30px auto;
 }
-
-.btn {
-  display: inline-block;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  padding: 10px 32px;
-  min-width: 216px;
+.button {
   background-color: var(--accent-text-color);
   color: var(--white-color);
+  border: 1px solid transparent;
+  border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   font-family: inherit;
   font-weight: 700;
@@ -342,10 +327,17 @@ img {
   line-height: 1.88;
   letter-spacing: 0.06em;
   cursor: pointer;
+}
+.hero__button {
+  display: inline-block;
+  padding: 10px 32px;
+  min-width: 216px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.btn:hover,
-.btn:focus {
+
+
+.hero__button:hover,
+.hero__button:focus {
   background-color: var(--btn-hover-color);
 }
 .section {
@@ -364,7 +356,7 @@ img {
   clip-path: inset(50%);
   margin: -1px;
 }
-.section-title {
+.section__title {
   margin-bottom: 50px;
   color: var(--title-text-color);
   font-size: 36px;
@@ -372,25 +364,18 @@ img {
   letter-spacing: 0.03em;
   text-align: center;
 }
-.subtitle {
-  margin-bottom: 10px;
-  color: var(--title-text-color);
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
+
 /* features */
 .features {
   display: flex;
 }
-.features-item + .features-item {
+.features__item + .features__item {
   margin-left: 30px;
 }
-.features-item {
+.features__item {
   width: 270px;
 }
-.features-icon {
+.features__icon {
   display: flex;
   height: 120px;
   justify-content: center;
@@ -399,7 +384,15 @@ img {
   background-color: var(--section-background);
   border-radius: 4px;
 }
-.features p {
+.features__subtitle {
+  margin-bottom: 10px;
+  color: var(--title-text-color);
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.features__text {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -413,12 +406,12 @@ img {
   display: flex;
   margin-right: -30px;
 }
-.thumb-item {
+.thumbs__item {
   position: relative;
   flex-basis: calc(100% / 3 - 30px);
   margin-right: 30px;
 }
-.thumb-overlay {
+.thumbs__overlay {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -428,7 +421,7 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
 }
-.thumb-text {
+.thumbs__text {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -445,7 +438,7 @@ img {
   display: flex;
   margin-right: -30px;
 }
-.avatar {
+.members__item {
   margin-right: 30px;
   background-color: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -453,10 +446,10 @@ img {
   border-radius: 0px 0px 4px 4px;
   text-align: center;
 }
-.member-img {
+.members__box {
   padding: 30px;
 }
-.member {
+.members__subtitle {
   margin-bottom: 10px;
   color: var(--title-text-color);
   font-weight: 500;
@@ -464,7 +457,7 @@ img {
   line-height: 1.19;
   letter-spacing: 0.03em;
 }
-.member-text {
+.members__text {
   margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.19;
@@ -526,12 +519,12 @@ img {
 }
 
 /* portfolio button */
-.buttons {
+.selection {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
 }
-.button {
+.selection__button {
   display: inline-block;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -548,11 +541,11 @@ img {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.buttons .item:not(:last-child) {
+.selection__item:not(:last-child) {
   margin-right: 8px;
 }
-.button:hover,
-.button:focus {
+.selection__button:hover,
+.selection__button:focus {
   color: var(--white-color);
   background-color: var(--accent-text-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -560,46 +553,46 @@ img {
   border-radius: 4px;
 }
 /* portfolio */
-.portfolio {
+.projects {
   display: flex;
   flex-wrap: wrap;
   margin-right: -30px;
   margin-bottom: -30px;
 }
-.project {
+.projects__item {
   flex-basis: calc(100% / 3 - 30px);
   margin-right: 30px;
   margin-bottom: 30px;
 }
-.project-item {
+.projects__box {
   padding: 20px 24px;
   border: 1px solid var(--project-item-border-color);
 }
-.portfolio-title {
+.projects__title {
   margin-bottom: 4px;
   color: var(--title-text-color);
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
-.portfolio-text {
+.projects__text {
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
 }
-.project-link {
+.projects__link {
   display: block;
   background-color: var(--white-color);
   text-decoration: none;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.project-link:hover,
-.project-link:focus {
+.projects__link:hover,
+.projects__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-.project-img {
+.projects__img {
   position: relative;
   overflow: hidden;
 }
@@ -614,11 +607,11 @@ img {
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.project-link:hover .project-overlay,
-.project-link:focus .project-overlay {
+.projects__link:hover .project-overlay,
+.projects__link:focus .project-overlay {
   transform: translateY(0);
 }
-.project-text {
+.project-overlay__text {
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
@@ -664,7 +657,7 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-btn {
+.modal__btn {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -679,11 +672,11 @@ img {
   cursor: pointer;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-btn:hover,
-.modal-btn:focus {
+.modal__btn:hover,
+.modal__btn:focus {
   fill: var(--accent-text-color);
 }
-.modal-title {
+.signup__text {
   margin-bottom: 30px;
   font-weight: 700;
   font-size: 20px;
@@ -692,19 +685,19 @@ img {
   letter-spacing: 0.03em;
   color: var(--title-text-color);
 }
-.modal-form {
+.signup {
   display: flex;
   flex-direction: column;
 }
-.modal-list {
+.signup__list {
   display: flex;
   flex-direction: column;
   gap: 28px;
 }
-.modal-item {
+.signup__item {
   position: relative;
 }
-.modal-input {
+.signup__input {
   width: 100%;
   padding: 11px 12px 11px 43px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -717,18 +710,18 @@ img {
   outline: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-input:focus {
+.signup__input:focus {
   border-color: var(--accent-text-color);
 }
-.modal-input::placeholder,
-.modal-comment::placeholder {
+.signup__input::placeholder,
+.comment::placeholder {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.167;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-.modal-label {
+.signup__label {
   position: absolute;
   top: 50%;
   left: 43px;
@@ -741,21 +734,21 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-input:focus + .modal-label,
-.modal-input:not(:placeholder-shown) + .modal-label {
+.signup__input:focus + .signup__label,
+.signup__input:not(:placeholder-shown) + .signup__label {
   transform: translate(-43px, -36px);
 }
-.modal-input:focus ~ .modal-icon {
+.signup__input:focus ~ .signup__icon {
   fill: var(--accent-text-color);
 }
-.modal-icon {
+.signup__icon {
   position: absolute;
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
   fill: var(--title-text-color);
 }
-.modal-comment {
+.comment {
   resize: none;
   width: 100%;
   height: 120px;
@@ -771,10 +764,10 @@ img {
   outline: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-comment:focus {
+.comment:focus {
   border-color: var(--accent-text-color);
 }
-.modal-comment-label {
+.comment__label {
   margin-top: 10px;
   margin-bottom: 4px;
   font-weight: 400;
@@ -783,7 +776,7 @@ img {
   letter-spacing: 0.01em;
   color: var(--primary-text-color);
 }
-.checkbox-input {
+.checkbox__input {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -793,7 +786,7 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-.checkbox-icon {
+.checkbox__icon {
   display: flex;
   align-items: center;
   margin-right: 8px;
@@ -804,16 +797,16 @@ img {
   fill: var(--white-color);
   fill-opacity: 0;
 }
-.checkbox-input:checked + .checkbox-icon {
+.checkbox__input:checked + .checkbox__icon {
   border: none;
   background-color: var(--accent-text-color);
   fill-opacity: 1;
 }
-.checkbox-input:focus + .checkbox-icon {
+.checkbox__input:focus + .checkbox__icon {
   border-color: var(--accent-text-color);
 }
 
-.checkbox-label {
+.checkbox {
   display: flex;
   align-items: center;
   margin: 0 auto 30px auto;
@@ -825,30 +818,19 @@ img {
   color: var(--primary-text-color);
 }
 
-.checkbox-link {
+.checkbox__link {
   margin-left: 5px;
   color: var(--accent-text-color);
 }
-.modal-button {
+.signup__button {
   position: relative;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  border: 1px solid transparent;
-  border-radius: 4px;
   padding: 10px 52px;
   max-width: 200px;
-  background-color: var(--accent-text-color);
-  color: var(--white-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  cursor: pointer;
 }
-.modal-button:hover,
-.modal-button:focus {
+.signup__button:hover,
+.signup__button:focus {
   background-color: var(--btn-hover-color);
 }
